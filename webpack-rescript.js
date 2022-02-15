@@ -9,8 +9,8 @@ module.exports = {
       output: {
         ...config.output,
         publicPath: 'auto',
-        filename: "exparion-widgets.js",
-        library: 'exparionWidgets',
+        filename: "experian-widgets.js",
+        library: 'experianWidgets',
       },
       optimization: {
         splitChunks: {

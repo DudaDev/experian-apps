@@ -1,5 +1,5 @@
 {
-  "name": "exparion-apps",
+  "name": "experian-apps",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "start": "cross-env BROWSER=none rescripts start",
     "build": "rescripts build",
     "test": "rescripts test",
+    "deploy": "npm run build && vercel --prod",
     "eject": "react-scripts eject"
   },
   "rescripts": [
