@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Example Usage
-In the Widget Builder JS section, it can be used like this (if it is deployed at `https://experian-apps.vercel.app/experian-widgets.js`):
+In the Widget Builder JS section, it can be used like this (given the result is deployed at `https://experian-apps.vercel.app/experian-widgets.js`):
 ```js
 const widgetsHandlerScript = 'https://experian-apps.vercel.app/experian-widgets.js';
 
