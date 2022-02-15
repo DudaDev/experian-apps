@@ -28,7 +28,29 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root1">
+      <div id="widget1" style="width: 100%"></div>
+      <div id="widget2" style="width: 100%"></div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.exparionWidgets.renderWidget(
+          "charts",
+          document.getElementById("widget1"),
+          {
+            title: "Charts",
+            hasTooltip: true,
+            chartType: "line",
+            accountSelector: true,
+          }
+        );
+        window.exparionWidgets.renderWidget(
+          "table",
+          document.getElementById("widget2"),
+          { title: "Table", accountSelector: true, rowNumber: 2 }
+        );
+      });
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

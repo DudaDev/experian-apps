@@ -1,0 +1,39 @@
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  grid-template-areas:
+    "title title"
+    "chart chart";
+}
+.main.accountSelector {
+  grid-template-areas:
+    "title title"
+    "account chart";
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.account {
+  grid-area: account;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  min-width: 250px;
+}
+
+.chart {
+  grid-area: chart;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
