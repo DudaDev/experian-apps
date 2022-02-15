@@ -4,11 +4,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ## Example Usage
-In the Widget Builder JS section, it can be used like this (given the result is deployed at `https://experian-apps.vercel.app/experian-widgets.js`):
+In the Widget Builder JS section, it can be used like this:
 ```js
+// (given the result is deployed at `https://experian-apps.vercel.app`)
 const widgetsHandlerScript = 'https://experian-apps.vercel.app/experian-widgets.js';
 
+// fetches the script, and waits for it to load
 api.scripts.loadScript(widgetsHandlerScript).then(() => {
+    // given that the script exposes the `experianWidgets` namespace, we fire the `renderWidget` method
+    // that dispatches the rendering. We ask it to fetch the 'charts' widget,
+    // pass it the container (`element`) and the props
     window.experianWidgets.renderWidget('charts', element, {
         title: data.config.title,
         chartType: data.config.chartType,
