@@ -2,6 +2,23 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Example Usage
+In the Widget Builder JS section, this can be used like this (if it is deployed at `https://experian-apps.vercel.app/experian-widgets.js`):
+```js
+const widgetsHandlerScript = 'https://experian-apps.vercel.app/experian-widgets.js';
+
+api.scripts.loadScript(widgetsHandlerScript).then(() => {
+    window.experianWidgets.renderWidget('charts', element, {
+        title: data.config.title,
+        chartType: data.config.chartType,
+        hasTooltip: data.config.hasTooltip,
+        accountSelector: data.config.accountSelector
+    })
+});
+```
+
+
 ## Available Scripts
 
 In the project directory, you can run:
